@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Vamshiii2/dev.git'
+                 git url: 'https://github.com/Vamshiii2/dev.git', branch: 'main', credentialsId: 'github-pat'
             }
         }
         
