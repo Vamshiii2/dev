@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('hello-world-python')
+                    docker.build('vamshi0007gangammahello-world-python')
                 }
             }
         }
