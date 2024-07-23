@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'github-pat') {
-                              docker.image('vamshi0007gangamma/hello-world-python').push('latest')
+                              docker.image('vamshi0007gangammahello-world-python').push('latest')
                     }
                 }
             }
