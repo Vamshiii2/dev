@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/hello-world-python.git'
+                git 'https://github.com/Vamshiii2/dev.git'
             }
         }
         
@@ -19,7 +19,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'Vinu') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'github-pat') {
                         docker.image('hello-world-python').push('latest')
                     }
                 }
